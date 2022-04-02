@@ -1,4 +1,4 @@
-//changing wave position
+//코드 마무리 정리
 var cols, rows;
 var scl = 20;
 var w = 1200; 
@@ -29,7 +29,6 @@ function setup() {
 
 }
 let time=10;
-let t=frameCount;
 function draw() {
   normalMaterial();
   flying -= 0.009;
@@ -47,7 +46,6 @@ function draw() {
   background(0);
   translate(0, 50);
   rotateX(PI / 2.5);
-  //fill(200, 200, 200, 150);
   translate(-w / 2, -h / 2);
   for (var y = 0; y < rows - 1; y++) {
     beginShape(TRIANGLE_STRIP);
@@ -65,7 +63,6 @@ function draw() {
 
     rotate(PI/5);
     push();
-
     camera.lookAt(10, -100,-100);
     camera.setPosition(sin(millis() / 1000) * 50, -100, 300);
     if(time>0){time=time -2390;}
@@ -82,7 +79,6 @@ function draw() {
     if(frameCount<-10) rotate(frameCount * 0.1);
 
     translate(1450, 1800 ,i+50);
-    fill(255,0,255);
     texture(img);
     torus(100, 30);
     pop();
