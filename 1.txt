@@ -1,3 +1,4 @@
+//increase map size, changing rotate(x)
 var cols, rows;
 var scl = 20;
 var w = 1000; 
