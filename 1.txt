@@ -1,4 +1,4 @@
-//moon return
+//return tube
 var cols, rows;
 var scl = 20;
 var w = 1200; 
@@ -24,7 +24,7 @@ function setup() {
 
 }
 let time=10;
-
+let t=frameCount;
 function draw() {
   normalMaterial();
   flying -= 0.009;
@@ -61,8 +61,8 @@ function draw() {
     rotate(PI/5);
     push();
 
-    camera.lookAt(10, -50, -100);
-    //camera.setPosition(sin(millis() / 1000) * 100, -10, 100);
+    camera.lookAt(10, -50,-100);
+    camera.setPosition(sin(millis() / 1000) * 50, -100, 300);
     if(time>0){time=time -2390;}
     if(time<0){time =time +2400;}
     translate(time-700,100,time-900);
@@ -70,6 +70,14 @@ function draw() {
     fill(270,330,0);
     sphere(150);
     if (time>2000) time=-2390;
+    pop();
+     push();
+    if(frameCount>10) rotateY(frameCount =0);
+    if(frameCount<-10) rotateY(frameCount * 0.1);
+    translate(0,0,-500);
+
+
+    torus(200, 100);
     pop();
     pointLight(2500, 250, 250, mouseX, mouseY, 50);
 
