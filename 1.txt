@@ -1,4 +1,4 @@
-//changing tube hole size
+//changing tube image
 var cols, rows;
 var scl = 20;
 var w = 1200; 
@@ -9,6 +9,9 @@ var flying = 0;
 
 var terrain = [];
 let camera;
+
+function preload() {
+img = loadImage('https://previews.123rf.com/images/viaire/viaire1502/viaire150200005/36643763-modelo-lindo-con-los-corazones-fresas-y-flores.jpg%27);%7D
 
 function setup() {
   createCanvas(600, 600, WEBGL);
@@ -79,6 +82,7 @@ function draw() {
 
     translate(1450, 1800 ,-80+i);
     fill(255,0,255);
+    texture(img);
     torus(100, 30);
     i=i+1.5
     if (i>125) i=0;
