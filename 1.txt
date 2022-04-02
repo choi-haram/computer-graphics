@@ -1,4 +1,4 @@
-//changing tube position
+//changing wave position
 var cols, rows;
 var scl = 20;
 var w = 1200; 
@@ -66,7 +66,7 @@ function draw() {
     rotate(PI/5);
     push();
 
-    camera.lookAt(10, -50,-100);
+    camera.lookAt(10, -100,-100);
     camera.setPosition(sin(millis() / 1000) * 50, -100, 300);
     if(time>0){time=time -2390;}
     if(time<0){time =time +2400;}
