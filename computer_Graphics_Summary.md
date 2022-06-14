@@ -1,4 +1,4 @@
-# 2학년 1학기 컴퓨터 그래픽스 정리
+# Computer graphics summary for the first semester of the second grade
 
 ## 프로세싱 소프트웨어 익히기
 
